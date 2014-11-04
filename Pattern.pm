@@ -12,7 +12,7 @@ use Image::Random;
 use Video::Delay::Const;
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Constructor.
 sub new {
@@ -44,7 +44,6 @@ sub new {
 	# Own image generator.
 	if (! defined $self->{'image_generator'}) {
 		$self->{'image_generator'} = Image::Random->new(
-			'color_random' => 1,
 			'height' => 1080,
 			'type' => $self->{'image_type'},
 			'width' => 1920,
@@ -239,6 +238,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
